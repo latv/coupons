@@ -1,0 +1,16 @@
+{
+    "name": "tet/coupons",
+    "autoload": {
+        "psr-4": {
+            "Tet\\Coupons\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Your Name"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "require": {}
+}
