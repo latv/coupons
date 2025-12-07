@@ -16,7 +16,7 @@ class CouponController extends Controller
     {
         $this->client = new Client();
         // Assuming the backend is hosted on the 'products' service
-        $this->apiUrl = 'http://products:8000/api/coupons';
+        $this->apiUrl = 'http://coupons:8000/api/coupons';
     }
 
     public function index()

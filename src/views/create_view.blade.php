@@ -6,15 +6,7 @@
 <body>
     <h1>Create Coupon</h1>
     
-    @if ($errors->any())
-        <div style="color:red">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <form action="{{ route('coupons.store') }}" method="POST">
         @csrf

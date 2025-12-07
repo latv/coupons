@@ -6,15 +6,7 @@
 <body>
     <h1>Edit Coupon: {{ $coupon['code'] }}</h1>
     
-    @if ($errors->any())
-        <div style="color:red">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <form action="{{ route('coupons.update', $coupon['id']) }}" method="POST">
         @csrf

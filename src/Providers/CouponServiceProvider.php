@@ -12,7 +12,7 @@ class CouponServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
 
         // 2. Load Views
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'coupons');
+        $this->loadViewsFrom(__DIR__ . '/../views', 'coupons');
     }
 
     public function register()
