@@ -10,7 +10,7 @@
                         
                         <div class="mb-3">
                             <label for="code" class="form-label">Code</label>
-                            <input type="text" class="form-control is-invalid " id="code" name="code" value="{{ old('code') }}" required>
+                            <input type="text" class="form-control " id="code" name="code" value="{{ old('code') }}" required>
                         </div>
 
                         <div class="row mb-3">
