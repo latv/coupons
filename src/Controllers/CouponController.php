@@ -15,7 +15,6 @@ class CouponController extends Controller
     public function __construct()
     {
         $this->client = new Client();
-        // Assuming the backend is hosted on the 'products' service
         $this->apiUrl = 'http://coupons:8000/api/coupons';
     }
 
@@ -44,7 +43,6 @@ class CouponController extends Controller
     {
         $data = $request->only(['code', 'type', 'value', 'expires_at', 'max_uses', 'is_active']);
         
-        // Basic validation matching the backend rules
         $validator = Validator::make($data, [
             'code' => 'required|string|max:255',
             'type' => 'required|in:fixed,percentage',
@@ -58,7 +56,6 @@ class CouponController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        // Checkbox handling: if not present, set to false/0
         $data['is_active'] = $request->has('is_active');
 
         $this->client->post($this->apiUrl, [

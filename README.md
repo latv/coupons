@@ -1,3 +1,2 @@
-# coupons
-# coupons
-# coupons
+# Coupons package
+composer require tet/coupons
